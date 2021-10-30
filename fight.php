@@ -19,7 +19,6 @@ $p2role = filter_input(INPUT_GET, "p2role");
     <!-- Instanciation des classes -->
     <div>
         <?php
-        echo $p2role;
         $p1role == 'mage' ? $p1 = new Mage($p1name) : $p1 = new Guerrier($p1name);
         $p2role == 'mage' ? $p2 = new Mage($p2name) : $p2 = new Guerrier($p2name);
 
@@ -29,11 +28,15 @@ $p2role = filter_input(INPUT_GET, "p2role");
     </div>
 
     <section>
+        <!-- Fight -->
         <?php
-        while($p1->pv <= 0 || $p2->pv <= 0)
-        {
-            // Déroulement du fight...
-        }
+            while($p1->getPV() > 0 && $p2->getPV() > 0) {
+                // Déroulement du fight
+            }
+
+            // TODO Afficher le gagnant
+
+            // TODO Demander de rejouer
         ?>
 
     </section>

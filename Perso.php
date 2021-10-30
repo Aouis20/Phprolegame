@@ -10,7 +10,7 @@ abstract class Perso
     private $def;
     private $state;
 
-    // SETTER NAME PV ATQ DEF
+    // SETTERS NAME PV ATQ DEF
 
     public function setNAME($name)
     {
@@ -104,7 +104,7 @@ class Mage extends Perso
 
     public function Sleep(Perso $target)
     {
-        // Sleep 
+        // TODO Sleep 
     }
 }
 
